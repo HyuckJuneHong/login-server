@@ -1,0 +1,45 @@
+# JWT
+jwt:
+  iss: skills
+  secret:
+    access-key: 2ij22r232rirDJAGp!9@^#2ihger!fywubwlekhf8234
+  access-expire: 300_000  # 10 seconds
+  refresh-expire: 604_800_000 # 7 days
+  # 5 min : 300_000
+
+# AES
+aes:
+  secret:
+    key: amd2@1k!zQMZjq#4
+  iv: zxAS12!@cvDF34#$
+
+# Spring
+spring:
+
+  # H2
+  h2:
+    console:
+      enabled: true
+
+  # Datasource
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db
+    username: sa
+    password:
+
+  # JPA
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
+
+  # Dummy Data
+  sql:
+    init:
+      mode: always
